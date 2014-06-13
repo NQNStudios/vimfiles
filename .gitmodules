@@ -1,0 +1,3 @@
+[submodule "bundle/hardmode"]
+	path = bundle/hardmode
+	url = git@github.com:wikitopian/hardmode.git
