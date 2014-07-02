@@ -1,3 +1,9 @@
 [submodule "bundle/hardmode"]
 	path = bundle/hardmode
 	url = git@github.com:wikitopian/hardmode.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule "AutoHotkey"]
+	path = AutoHotkey
+	url = git@github.com:Natman64/AutoHotkey.git
