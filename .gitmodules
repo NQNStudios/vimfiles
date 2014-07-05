@@ -7,3 +7,6 @@
 [submodule "AutoHotkey"]
 	path = AutoHotkey
 	url = git@github.com:Natman64/AutoHotkey.git
+[submodule "bundle/vim-journal"]
+	path = bundle/vim-journal
+	url = git@github.com:Natman64/vim-journal.git
