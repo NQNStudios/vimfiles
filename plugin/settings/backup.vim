@@ -1,1 +1,1 @@
-set nobackup
+set backupdir=~/.vimbackup,~/.vimbackup2,~/.vimbackup3
