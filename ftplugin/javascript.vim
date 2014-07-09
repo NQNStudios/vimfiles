@@ -1,6 +1,4 @@
-let s:tabwidth = 2 " tab will indent 2 columns
-
-set tabstop=s:tabwidth
-set softtabstop=s:tabwidth
-set shiftwidth=s:tabwidth
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab " replace tab with spaces
