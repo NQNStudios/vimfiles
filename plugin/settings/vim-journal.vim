@@ -1,1 +1,1 @@
-let g:vimJournalDir='Google Drive/Journal'
+let g:vimJournalDir='Dropbox/Journal'
