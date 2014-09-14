@@ -60,3 +60,4 @@ else
 endif " has("autocmd")
 
 call pathogen#infect()
+Helptags
