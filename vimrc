@@ -2,21 +2,62 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
+" Encode all files in UTF-8
+set encoding=utf-8
+set fileencoding=utf-8
 
+" Keep backups in ~/.vimbackup
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
   set backup		" keep a backup file
+
+  if !isdirectory($HOME . '/.vimbackup')
+    call mkdir($HOME . '/.vimbackup', 'p')
+  end
+
+  set backupdir=~/.vimbackup
 endif
+
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
+set ic " ignore search case
 
-" Don't use Ex mode, use Q for formatting
-map Q gq
+set number " Always show line numbers
+set visualbell " Use a visual warning for bad operations
+
+" Console window size
+set lines=30
+set columns=100
+
+" TAB
+" For most languages, use these settings
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" KEYBOARD
+" Disable the arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
+" Disable space, enter, backspace in Normal mode
+map <space> <nop>
+map <return> <nop>
+map <BS> <nop>
+
+"Disable deletion in insert mode
+imap <BS> <nop>
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
