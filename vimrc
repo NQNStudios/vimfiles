@@ -14,7 +14,7 @@ set cursorline " Highlight the current line
 set ttyfast " Is a fast terminal
 set laststatus=2 " Permanent status bar
 
-set backspace=indent, eol, start " Sane character deletion
+set backspace=indent,eol,start " Sane character deletion
 set autoindent
 set history=50 " keep 50 lines of command line history
 set ruler " show the cursor position all the time
@@ -109,10 +109,11 @@ map <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 map <leader>w <C-w>v<C-w>l
 
 syntax on
-filetype plugin indent on
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
+
+  filetype plugin indent on 
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
