@@ -40,6 +40,10 @@ set softtabstop=4
 set expandtab
 
 " KEYBOARD
+
+" Use ; to enter command mode
+map ; :
+
 " Disable the arrow keys
 map <up> <nop>
 map <down> <nop>
