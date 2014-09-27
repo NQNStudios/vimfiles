@@ -7,9 +7,9 @@
 [submodule "bundle/vim-journal"]
 	path = bundle/vim-journal
 	url = git@github.com:Natman64/vim-journal.git
-[submodule "bundle/vim-numbertoggle"]
-	path = bundle/vim-numbertoggle
-	url = git@github.com:jeffkreeftmeijer/vim-numbertoggle.git
 [submodule "bundle/vim-jekyll"]
 	path = bundle/vim-jekyll
 	url = https://github.com/parkr/vim-jekyll.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = git@github.com:scrooloose/nerdcommenter.git

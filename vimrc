@@ -2,37 +2,118 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
+" Encode all files in UTF-8
+set encoding=utf-8
+set fileencoding=utf-8
 
-if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-else
-  set backup		" keep a backup file
-endif
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
+set modelines=0 " For security
+set scrolloff=3 " For search result context
+set wildmenu " For command line suggestions with TAB
+set wildmode=list:longest
+set cursorline " Highlight the current line
+set ttyfast " Is a fast terminal
+set laststatus=2 " Permanent status bar
 
-" Don't use Ex mode, use Q for formatting
-map Q gq
+set backspace=indent,eol,start " Sane character deletion
+set autoindent
+set history=50 " keep 50 lines of command line history
+set ruler " show the cursor position all the time
+set showcmd	" display incomplete commands
+set relativenumber " Always show relative line numbers
+set visualbell " Use a visual warning for bad operations
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
-endif
+" Keep backups in ~/.vimbackup
+set backup " keep a backup file
+
+if !isdirectory($HOME . '/.vimbackup')
+  call mkdir($HOME . '/.vimbackup', 'p')
+end
+
+set backupdir=~/.vimbackup
+
+" Console window size
+set lines=30
+set columns=100
+
+" TAB
+" For most languages, use these settings
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" SEARCH
+nnoremap / /\v
+vnoremap / /\v
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+nnoremap <leader>/ :noh<cr>
+nnoremap <tab> %
+vnoremap <tab> %
+
+" LINES
+set wrap
+set textwidth=79
+set formatoptions=cqrnj1
+set colorcolumn=85
+
+" KEYBOARD
+
+" Never use Ex mode
+map Q <nop>
+
+" Disable the arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
+" Screen line movement
+nnoremap j gj
+nnoremap k gk
+
+" Disable space, enter, backspace in Normal mode
+map <space> <nop>
+map <return> <nop>
+map <BS> <nop>
+
+"Disable deletion in insert mode
+imap <BS> <nop>
+
+" LEADER SHORTCUTS
+
+let mapleader = " "
+
+" Under the current line, add another line of hyphens of equal char width
+map <leader>u yypVr-
+
+" Strip all trailing whitspace in the current file
+map <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Force wrapping this paragraph
+map <leader>q gqip
+
+" Edit vimrc!
+map <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+
+" New vsplit!
+map <leader>w <C-w>v<C-w>l
+
+syntax on
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
+  filetype plugin indent on 
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
@@ -52,10 +133,6 @@ if has("autocmd")
     \ endif
 
   augroup END
-
-else
-
-  set autoindent		" always set autoindenting on
 
 endif " has("autocmd")
 
