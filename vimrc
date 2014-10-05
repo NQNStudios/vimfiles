@@ -43,8 +43,6 @@ set softtabstop=4
 set expandtab
 
 " SEARCH
-nnoremap / /\v
-vnoremap / /\v
 set ignorecase
 set smartcase
 set gdefault
