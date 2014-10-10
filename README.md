@@ -22,10 +22,10 @@ To use these configuration files with a new installation of Vim, simply follow t
 3. (Optional) Navigate to /etc/vim. Delete the same files for which you just deleted shortcuts.
 4. Make sure your HOME environment variable is set to your desired home directory.
 
-    cd ~/
-    git clone git@gist.github.com:/0bf63d489336c9b5fd52.git
-    cd 0bf63d489336c9b5fd52
-    chmod +x install-vimfiles
-    ./install-vimfiles
-    cd ~/
-    rm -rf 0bf63d489336c9b5fd52
+> cd ~/
+> git clone git@gist.github.com:/0bf63d489336c9b5fd52.git
+> cd 0bf63d489336c9b5fd52
+> chmod +x install-vimfiles
+> ./install-vimfiles
+> cd ~/
+> rm -rf 0bf63d489336c9b5fd52
