@@ -1,4 +1,4 @@
 source ~/.vim/vimrc
 
 " mobile-specific settings
-let g:gitPath="/sdcard/Android/data/me.sheimi.sgit/files/repo"
+let g:gitPath="/storage/emulated/0/Android/data/me.sheimi.sgit/files/repo"
