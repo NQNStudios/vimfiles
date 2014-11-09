@@ -87,6 +87,12 @@ map <BS> <nop>
 "Disable deletion in insert mode
 imap <BS> <nop>
 
+" Convenience commands (to avoid caps error time-wasting)
+command W w
+command Q q
+command Wq wq
+command WQ wq
+
 " LEADER SHORTCUTS
 
 let mapleader = " "
@@ -134,5 +140,6 @@ if has("autocmd")
 
 endif " has("autocmd")
 
+" install plugins and generate helptags
 call pathogen#infect()
 Helptags
