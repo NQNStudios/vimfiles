@@ -1,3 +1,9 @@
 source ~/.vim/vimrc
 
 " mobile-specific settings
+
+set nottyfast
+set laststatus=1
+set noshowcmd
+set colorcolumn=""
+
