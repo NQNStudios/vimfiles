@@ -49,7 +49,6 @@ set gdefault
 set incsearch
 set showmatch
 set hlsearch
-nnoremap <leader>/ :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
@@ -95,7 +94,7 @@ command WQ wq
 
 " LEADER SHORTCUTS
 
-let mapleader = " "
+let mapleader=" "
 
 " Under the current line, add another line of hyphens of equal char width
 map <leader>u yypVr-
@@ -111,6 +110,8 @@ map <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
 " New vsplit!
 map <leader>w <C-w>v<C-w>l
+
+nnoremap <leader>/ :noh<cr>
 
 syntax on
 
