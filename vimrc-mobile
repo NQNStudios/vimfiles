@@ -1,3 +1,4 @@
+let g:mobile=1
 source ~/.vim/vimrc
 
 " mobile-specific settings

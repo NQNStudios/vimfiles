@@ -55,7 +55,14 @@ vnoremap <tab> %
 " LINES
 set wrap
 set textwidth=79
-set formatoptions=cqrnj1
+set formatoptions=cqrn1
+
+if exists("g:mobile")
+  " avoid a VimTouch bug by skipping for mobile
+else
+  set formatoptions+=j 
+endif
+
 set colorcolumn=85
 
 " KEYBOARD
@@ -112,6 +119,7 @@ map <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 map <leader>w <C-w>v<C-w>l
 
 nnoremap <leader>/ :noh<cr>
+nnoremap <leader>r :redo<cr>
 
 syntax on
 
