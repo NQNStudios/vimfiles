@@ -152,3 +152,6 @@ endif " has("autocmd")
 " install plugins and generate helptags
 call pathogen#infect()
 Helptags
+
+" PythonMode settings
+let g:pymode_folding=0
