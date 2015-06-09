@@ -155,3 +155,7 @@ Helptags
 
 " PythonMode settings
 let g:pymode_folding=0
+
+" Allow persistent undo
+set undofile
+set undodir=~/.vimundo
