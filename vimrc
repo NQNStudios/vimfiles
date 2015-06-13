@@ -98,6 +98,7 @@ command W w
 command Q q
 command Wq wq
 command WQ wq
+command E e
 
 " LEADER SHORTCUTS
 
