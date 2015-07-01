@@ -57,8 +57,10 @@ set wrap
 set textwidth=79
 set formatoptions=cqrn1
 
-if exists("g:mobile")
+let s:os = substitute(system("uname"), "\n", "", "")
+if exists("g:mobile") || s:os == "Darwin"
   " avoid a VimTouch bug by skipping for mobile
+  " Also avoid the same bug if operating on a Mac
 else
   set formatoptions+=j 
 endif
