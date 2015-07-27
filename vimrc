@@ -109,17 +109,14 @@ let mapleader=" "
 " Under the current line, add another line of hyphens of equal char width
 map <leader>u yypVr-
 
-" Strip all trailing whitspace in the current file
-map <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-
 " Force wrapping this paragraph
 map <leader>q gqip
 
 " Edit vimrc!
 map <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
-" New vsplit!
-map <leader>w <C-w>v<C-w>l
+" Switch splits
+map <leader>w <C-w>
 
 nnoremap <leader>/ :noh<cr>
 nnoremap <leader>r :redo<cr>
