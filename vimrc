@@ -43,22 +43,28 @@ set softtabstop=4
 set expandtab
 
 " SEARCH
-nnoremap / /\v
-vnoremap / /\v
 set ignorecase
 set smartcase
 set gdefault
 set incsearch
 set showmatch
 set hlsearch
-nnoremap <leader>/ :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
 " LINES
 set wrap
 set textwidth=79
-set formatoptions=cqrnj1
+set formatoptions=cqrn1
+
+let s:os = substitute(system("uname"), "\n", "", "")
+if exists("g:mobile") || s:os == "Darwin"
+  " avoid a VimTouch bug by skipping for mobile
+  " Also avoid the same bug if operating on a Mac
+else
+  set formatoptions+=j 
+endif
+
 set colorcolumn=85
 
 " KEYBOARD
@@ -89,15 +95,19 @@ map <BS> <nop>
 "Disable deletion in insert mode
 imap <BS> <nop>
 
+" Convenience commands (to avoid caps error time-wasting)
+command W w
+command Q q
+command Wq wq
+command WQ wq
+command E e
+
 " LEADER SHORTCUTS
 
-let mapleader = " "
+let mapleader=" "
 
 " Under the current line, add another line of hyphens of equal char width
 map <leader>u yypVr-
-
-" Strip all trailing whitspace in the current file
-map <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Force wrapping this paragraph
 map <leader>q gqip
@@ -108,8 +118,11 @@ map <leader>Q gggqG
 " Edit vimrc!
 map <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
-" New vsplit!
-map <leader>w <C-w>v<C-w>l
+" Switch splits
+map <leader>w <C-w>
+
+nnoremap <leader>/ :noh<cr>
+nnoremap <leader>r :redo<cr>
 
 syntax on
 
@@ -139,5 +152,13 @@ if has("autocmd")
 
 endif " has("autocmd")
 
+" install plugins and generate helptags
 call pathogen#infect()
 Helptags
+
+" PythonMode settings
+let g:pymode_folding=0
+
+" Allow persistent undo
+set undofile
+set undodir=~/.vimundo
