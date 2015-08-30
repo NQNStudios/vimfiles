@@ -102,6 +102,9 @@ map <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " Force wrapping this paragraph
 map <leader>q gqip
 
+" Force wrapping entire document
+map <leader>Q gggqG
+
 " Edit vimrc!
 map <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
