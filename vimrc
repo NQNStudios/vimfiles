@@ -31,6 +31,15 @@ end
 
 set backupdir=~/.vimbackup
 
+" Keep undo file in ~/.vimundo
+set undofile "Allow persistent undo
+
+if !isdirectory($HOME . '/.vimundo')
+  call mkdir($HOME . '/.vimundo', 'p')
+end
+
+set undodir=~/.vimundo
+
 " Console window size
 set lines=30
 set columns=100
@@ -90,17 +99,12 @@ nnoremap k gk
 " Disable space, enter, backspace in Normal mode
 map <space> <nop>
 map <return> <nop>
-map <BS> <nop>
-
-"Disable deletion in insert mode
-imap <BS> <nop>
 
 " Convenience commands (to avoid caps error time-wasting)
 command W w
 command Q q
 command Wq wq
 command WQ wq
-command E e
 
 " LEADER SHORTCUTS
 
@@ -120,10 +124,6 @@ map <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
 " Switch splits
 map <leader>w <C-w>
-
-" a.vim shorcuts
-map <leader>a :A<cr>
-map <leader>av :AV<cr>
 
 nnoremap <leader>/ :noh<cr>
 nnoremap <leader>r :redo<cr>
@@ -159,10 +159,3 @@ endif " has("autocmd")
 " install plugins and generate helptags
 call pathogen#infect()
 Helptags
-
-" PythonMode settings
-let g:pymode_folding=0
-
-" Allow persistent undo
-set undofile
-set undodir=~/.vimundo
