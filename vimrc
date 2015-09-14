@@ -121,6 +121,10 @@ map <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 " Switch splits
 map <leader>w <C-w>
 
+" a.vim shorcuts
+map <leader>a :A<cr>
+map <leader>av :AV<cr>
+
 nnoremap <leader>/ :noh<cr>
 nnoremap <leader>r :redo<cr>
 
