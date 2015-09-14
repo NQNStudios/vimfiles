@@ -125,6 +125,10 @@ map <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 " Switch splits
 map <leader>w <C-w>
 
+" Scroll up and down by half the screen
+map <leader>j <C-d>
+map <leader>k <C-u>
+
 nnoremap <leader>/ :noh<cr>
 nnoremap <leader>r :redo<cr>
 
