@@ -10,3 +10,6 @@
 [submodule "bundle/python-mode"]
 	path = bundle/python-mode
 	url = git@github.com:klen/python-mode.git
+[submodule "bundle/a.vim"]
+	path = bundle/a.vim
+	url = git@github.com:Natman64/a.vim.git
