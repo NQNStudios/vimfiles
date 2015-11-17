@@ -96,9 +96,21 @@ imap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
-" Disable space, enter, backspace in Normal mode
+" Disable space, enter, backspace in normal mode. These movements should be
+" down with hjkl
 map <space> <nop>
 map <return> <nop>
+map <backspace> <nop>
+
+" Disable backspace in insertion mode. Deletion should be done in normal mode
+imap <backspace> <nop>
+
+" Open the command line with ; instead of : to half the keystrokes
+nnoremap ; :
+" Unmap : so we learn better habits
+nmap : <nop>
+" Then remap ; to enter so we can still do letter searches within lines
+nnoremap <return> ;
 
 " Convenience commands (to avoid caps error time-wasting)
 command W w
