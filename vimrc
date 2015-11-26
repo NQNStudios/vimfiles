@@ -122,6 +122,10 @@ command WQ wq
 
 let mapleader=" "
 
+" Paste from the clipboard
+map <leader>p "+p
+map <leader>P "+P
+
 " Under the current line, add another line of hyphens of equal char width
 map <leader>u yypVr-
 
