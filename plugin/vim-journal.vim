@@ -1,1 +1,1 @@
-let g:vimJournalDir='Copy/Journal'
+let g:vimJournalDir='SyncHole/Journal'

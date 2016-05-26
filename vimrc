@@ -81,6 +81,10 @@ set colorcolumn=85
 " Never use Ex mode
 map Q <nop>
 
+" Shift+Y and Shift+D don't process the whole line, just the rest of it
+nnoremap Y y$
+nnoremap D d$
+
 " Disable the arrow keys
 map <up> <nop>
 map <down> <nop>
