@@ -81,6 +81,10 @@ set colorcolumn=85
 " Never use Ex mode
 map Q <nop>
 
+" Shift+Y and Shift+D don't process the whole line, just the rest of it
+nnoremap Y y$
+nnoremap D d$
+
 " Disable the arrow keys
 map <up> <nop>
 map <down> <nop>
@@ -121,6 +125,10 @@ command WQ wq
 " LEADER SHORTCUTS
 
 let mapleader=" "
+
+" Paste from the clipboard
+map <leader>p "+p
+map <leader>P "+P
 
 " Under the current line, add another line of hyphens of equal char width
 map <leader>u yypVr-
