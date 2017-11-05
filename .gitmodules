@@ -13,3 +13,6 @@
 [submodule "bundle/a.vim"]
 	path = bundle/a.vim
 	url = git@github.com:Natman64/a.vim.git
+[submodule "bundle/typescript-vim"]
+	path = bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim
