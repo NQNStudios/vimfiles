@@ -122,6 +122,10 @@ command Q q
 command Wq wq
 command WQ wq
 
+" Save and execute a python script with :py
+command! -nargs=* Py w | !python % <f-args>
+command! -nargs=* Python Py <f-args>
+
 " LEADER SHORTCUTS
 
 let mapleader=" "
