@@ -161,6 +161,7 @@ syntax on
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 
+  autocmd BufReadPre,BufNewFile * let b:did_ftplugin = 1
   filetype plugin indent on 
 
   " Put these in an autocmd group, so that we can delete them easily.
