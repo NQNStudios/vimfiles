@@ -41,8 +41,8 @@ end
 set undodir=~/.vimundo
 
 " Console window size
-set lines=30
-set columns=50
+set lines=40
+set columns=70
 
 " TAB
 " For most languages, use these settings
