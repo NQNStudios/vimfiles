@@ -44,6 +44,9 @@ set undodir=~/.vimundo
 set lines=40
 set columns=70
 
+command Widen set columns=140
+command Narrow set columns=70
+
 " TAB
 " For most languages, use these settings
 set tabstop=4
@@ -95,10 +98,6 @@ imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
-
-" Screen line movement
-nnoremap j gj
-nnoremap k gk
 
 " Disable space, enter, backspace in normal mode. These movements should be
 " down with hjkl
