@@ -19,6 +19,7 @@ set autoindent
 set history=50 " keep 50 lines of command line history
 set ruler " show the cursor position all the time
 set showcmd	" display incomplete commands
+set number
 set relativenumber " Always show relative line numbers
 set visualbell " Use a visual warning for bad operations
 
