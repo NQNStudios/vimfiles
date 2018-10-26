@@ -108,6 +108,7 @@ map <backspace> <nop>
 
 " Disable backspace in insertion mode. Deletion should be done in normal mode
 " imap <backspace> <nop>
+inoremap jj <Esc>
 
 " Open the command line with ; instead of : to half the keystrokes
 nnoremap ; :
