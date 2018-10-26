@@ -115,7 +115,7 @@ nnoremap ; :
 " Unmap : so we learn better habits
 nmap : <nop>
 " Then remap ; to enter so we can still do letter searches within lines
-nnoremap <return> ;
+nnoremap ' ;
 
 " Convenience commands (to avoid caps error time-wasting)
 command W w
