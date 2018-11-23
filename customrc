@@ -189,3 +189,8 @@ endif " has("autocmd")
 " install plugins and generate helptags
 call pathogen#infect()
 Helptags
+
+" Easy copy and paste
+nmap <leader>y "+y
+nmap <leader>p "+p
+
