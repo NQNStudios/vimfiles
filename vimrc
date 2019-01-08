@@ -131,8 +131,8 @@ command! -nargs=* Python Py <f-args>
 
 let mapleader=" "
 
-" Under the current line, add another line of hyphens of equal char width
-map <leader>u yypVr-
+" Under the current line, add another line of the given char of equal char width
+map <leader>u yypVr
 
 " Force wrapping this paragraph
 map <leader>q gqip
